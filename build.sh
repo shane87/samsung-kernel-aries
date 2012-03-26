@@ -16,7 +16,7 @@ setup ()
             ;;
         *)
             KERNEL_DIR="$(dirname "$(readlink -f "$0")")"
-            CROSS_PREFIX="$ANDROID_BUILD_TOP/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-"
+            CROSS_PREFIX="$ANDROID_BUILD_TOP/prebuilt/linux-x86/toolchain/arm-linux-androideabi-4.4.x/bin/arm-linux-androideabi-"
             ;;
     esac
 
