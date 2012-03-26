@@ -41,6 +41,7 @@ setup ()
 
 build ()
 {
+    export KBUILD_BUILD_VERSION="s87-"${kbuild}
     local target=$1
     echo "Building for $target"
     local target_dir="$BUILD_DIR/$target"
