@@ -662,7 +662,7 @@ static struct attribute *default_attrs[] = {
 	&scaling_setspeed.attr,
 	&UV_mV_table.attr,
 	&frequency_voltage_table.attr,
-	$states_enabled_table.attr,
+	&states_enabled_table.attr,
 	NULL
 };
 
