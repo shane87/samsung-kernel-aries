@@ -561,7 +561,7 @@ static ssize_t show_scaling_setspeed(struct cpufreq_policy *policy, char *buf)
 //Add OC/UV support, thanks to morfic, TheEscapist, and THS
 static ssize_t show_UV_mV_table(struct cpufreq_policy *policy, char *buf)
 {
-	return sprintf(buf, "%d %d %d %d %d %d %d %d", &exp_UV_mV[0], &exp_UV_mV[1], &exp_UV_mV[2], &exp_UV_mV[3], &exp_UV_mV[4], &exp_UV_mV[5], &exp_UV_mV[6], &exp_UV_mV[7]);
+	return sprintf(buf, "%d %d %d %d %d %d %d %d", exp_UV_mV[0], exp_UV_mV[1], exp_UV_mV[2], exp_UV_mV[3], exp_UV_mV[4], exp_UV_mV[5], exp_UV_mV[6], exp_UV_mV[7]);
 }
 
 static ssize_t store_UV_mV_table(struct cpufreq_policy *policy, const char *buf, size_t count)
@@ -583,7 +583,7 @@ static ssize_t store_UV_mV_table(struct cpufreq_policy *policy, const char *buf,
 static ssize_t show_frequency_voltage_table(struct cpufreq_policy *policy, char *buf)
 {
 	return sprintf(buf,
-	"%d %d %d\n%d %d %d\n%d %d %d\n%d %d %d\n%d %d %d\n%d %d %d\n%d %d %d\n%d %d %d\n",
+	"%u %u %u\n%u %u %u\n%u %u %u\n%u %u %u\n%u %u %u\n%u %u %u\n%u %u %u\n%u %u %u\n",
 	freq_uv_table[0][0], freq_uv_table[0][1], freq_uv_table[0][2],
 	freq_uv_table[1][0], freq_uv_table[1][1], freq_uv_table[1][2],
 	freq_uv_table[2][0], freq_uv_table[2][1], freq_uv_table[2][2],
@@ -611,7 +611,7 @@ static ssize_t show_bios_limit(struct cpufreq_policy *policy, char *buf)
 
 static ssize_t show_states_enabled_table(struct cpufreq_policy *policy, char *buf)
 {
-	return sprintf(buf, "%d %d %d %d %d %d %d %d", &enabled_freqs[0], &enabled_freqs[1], &enabled_freqs[2], &enabled_freqs[3], &enabled_freqs[4], &enabled_freqs[5], &enabled_freqs[6], &enabled_freqs[7]);
+	return sprintf(buf, "%d %d %d %d %d %d %d %d", enabled_freqs[0], enabled_freqs[1], enabled_freqs[2], enabled_freqs[3], enabled_freqs[4], enabled_freqs[5], enabled_freqs[6], enabled_freqs[7]);
 }
 
 static ssize_t store_states_enabled_table(struct cpufreq_policy *policy, const char *buf, size_t count)
