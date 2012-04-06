@@ -70,7 +70,7 @@ enum s5pv210_mem_type {
 
 enum s5pv210_dmc_port {
 	DMC0 = 0,
-	DMC1,
+	DMC1 = 1,
 };
 
 //add oc/uv support -  thanks to morfic, TheEscapist, and THS
