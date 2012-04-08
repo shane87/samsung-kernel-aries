@@ -381,7 +381,7 @@ static int s5pv210_target(struct cpufreq_policy *policy,
 	cpufreq_notify_transition(&freqs, CPUFREQ_PRECHANGE);
 
 	/* Check if there need to change PLL */
-	if ((index == L0) || (priv_index == L0))
+	if ((index == L0) || (priv_index == L0) || (index == L1) || (priv_index == L1) || (index == L2) || (priv_index == L2))
 		pll_changing = 1;
 
 	/* Check if there need to change System bus clock */
@@ -484,7 +484,7 @@ static int s5pv210_target(struct cpufreq_policy *policy,
 	/* ARM MCS value changed */
 	reg = __raw_readl(S5P_ARM_MCS_CON);
 	reg &= ~0x3;
-	if (index >= L3)
+	if (index >= L6)
 		reg |= 0x3;
 	else
 		reg |= 0x1;
