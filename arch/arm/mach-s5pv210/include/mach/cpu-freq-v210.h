@@ -16,13 +16,14 @@
 
 //Add oc/uv support, thanks to morfic, TheEscapist, and THS
 //APLL M,P,S value for frequency
+#define APLL_VAL_1400 ((1 << 31) | (175 << 16) | (3 << 8) | (1)) //for 1400MHz oc - thanks to existz
 #define APLL_VAL_1300 ((1 << 31) | (325 << 16) | (6 << 8) | (1))
 #define APLL_VAL_1200 ((1 << 31) | (150 << 16) | (3 << 8) | (1))
 #define APLL_VAL_1000 ((1 << 31) | (125 << 16) | (3 << 8) | (1))
 #define APLL_VAL_800  ((1 << 31) | (100 << 16) | (3 << 8) | (1))
 
 enum perf_level {
-	L0, L1, L2, L3, L4, L5, L6, L7, MAX_PERF_LEVEL = L7,
+	L0, L1, L2, L3, L4, L5, L6, L7, L8, MAX_PERF_LEVEL = L8,
 };
 
 /* For cpu-freq driver */
