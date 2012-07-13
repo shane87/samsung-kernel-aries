@@ -16,7 +16,7 @@
 
 //Add oc/uv support, thanks to morfic, TheEscapist, and THS
 //APLL M,P,S value for frequency
-#define APLL_VAL_1800 ((1 << 31) | (225 << 16) | (3 << 8) | (1)) //for 1800MHz oc
+#define APLL_VAL_1800 ((1 << 31) | (200 << 16) | (3 << 8) | (1)) //for 1800MHz oc
 #define APLL_VAL_1700 ((1 << 31) | (400 << 16) | (6 << 8) | (1)) //for 1700MHz oc
 #define APLL_VAL_1600 ((1 << 31) | (200 << 16) | (3 << 8) | (1)) //for 1600MHz oc
 #define APLL_VAL_1500 ((1 << 31) | (375 << 16) | (6 << 8) | (1)) //for 1500MHz oc - thanks to tkGlitch

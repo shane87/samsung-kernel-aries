@@ -95,7 +95,7 @@ static struct cpufreq_frequency_table s5pv210_freq_table[] = {
 extern int exp_UV_mV[13]; //For uv support
 unsigned int freq_uv_table[13][3] = {
 	//freq, stock, current
-        {1800000, 1500, 1500},
+        {1800000, 1550, 1550},
         {1700000, 1500, 1500},
         {1600000, 1500, 1500},
         {1500000, 1500, 1500},
@@ -126,14 +126,14 @@ static unsigned int g_dvfslockval[DVFS_LOCK_TOKEN_NUM];
 #endif
 
 //add oc/uv support -  thanks to morfic, TheEscapist, and THS
-const unsigned long arm_volt_max = 1500000;
+const unsigned long arm_volt_max = 1550000;
 const unsigned long int_volt_max = 1250000;
 
 //add oc/uv support -  thanks to morfic, TheEscapist, and THS
 static struct s5pv210_dvs_conf dvs_conf[] = {
         //1800MHz - Added freq
         [L0] = {
-                .arm_volt   = 1500000,
+                .arm_volt   = 1550000,
                 .int_volt   = 1225000,
         },
         //1700MHz - Added freq
